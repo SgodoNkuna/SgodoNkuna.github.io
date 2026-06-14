@@ -126,7 +126,6 @@ body{font-family:'Inter',sans-serif;background:var(--white);color:var(--dark);ov
 }
 
 /* ── HEADLINE ─────────────────────────────────── */
-/* "Building" on line 1, rotating word below — FIXED WIDTH */
 .h1{
   font-family:'Syne',sans-serif;
   font-size:clamp(2.6rem,5vw,4rem);
@@ -134,41 +133,16 @@ body{font-family:'Inter',sans-serif;background:var(--white);color:var(--dark);ov
   color:var(--white);letter-spacing:-0.03em;
   margin-bottom:1.35rem;
 }
-
-/*
-  THE ROTATOR FIX:
-  - Container has FIXED height = exactly one line of text
-  - overflow:hidden clips anything above/below
-  - Each word is position:absolute, fades in/out with opacity
-  - Words are SHORT to guarantee fit: "products." / "solutions." / "tomorrow."
-*/
-.rot{
-  display:block;
-  height:1.06em;        /* matches line-height of h1 */
-  overflow:hidden;      /* clips vertical overflow */
-  position:relative;
-}
-.rw{
-  position:absolute;
-  left:0;top:0;
+/* JS-driven word swap — no CSS overflow issues possible */
+.rw-word{
   display:block;
   color:var(--sky);
   font-style:italic;
-  /* NO white-space:nowrap — let it wrap if needed */
-  opacity:0;
-  transform:translateY(70%);
+  transition:opacity .3s ease, transform .3s ease;
+  opacity:1;transform:translateY(0);
 }
-/* stagger: each word stays ~3.5s out of 10.5s */
-.rw-1{animation:slide 10.5s 0s   infinite ease-in-out}
-.rw-2{animation:slide 10.5s 3.5s infinite ease-in-out}
-.rw-3{animation:slide 10.5s 7s   infinite ease-in-out}
-@keyframes slide{
-  0%   {opacity:0;transform:translateY(70%)}
-  9%   {opacity:1;transform:translateY(0)}
-  30%  {opacity:1;transform:translateY(0)}
-  39%  {opacity:0;transform:translateY(-70%)}
-  100% {opacity:0;transform:translateY(-70%)}
-}
+.rw-word.fade-out{opacity:0;transform:translateY(-14px)}
+.rw-word.fade-in{opacity:0;transform:translateY(14px)}
 
 .h-sub{
   font-size:.94rem;line-height:1.78;
@@ -540,12 +514,8 @@ footer{background:var(--navy);padding:1.6rem 0;border-top:1px solid rgba(77,168,
       <div class="badge"><span class="live"></span>Available · Bloemfontein, South Africa</div>
 
       <h1 class="h1">
-        Building
-        <div class="rot">
-          <span class="rw rw-1">products.</span>
-          <span class="rw rw-2">solutions.</span>
-          <span class="rw rw-3">the future.</span>
-        </div>
+        Building<br>
+        <span id="rw" class="rw-word">products.</span>
       </h1>
 
       <p class="h-sub">
@@ -864,37 +834,39 @@ footer{background:var(--navy);padding:1.6rem 0;border-top:1px solid rgba(77,168,
       if (!cx || !cy) return;
 
       if (city.primary) {
-        /* Primary: Bloemfontein — red pulsing pin */
+        /* Bloemfontein — large RED pulsing pin, impossible to miss */
         const g = markerG.append('g')
           .attr('transform', `translate(${cx},${cy})`);
 
-        /* 3 pulsing rings — CSS scale animation from centre */
-        g.append('circle').attr('r', 22)
-          .attr('fill','none').attr('stroke','#ef4444').attr('stroke-width',1.5)
-          .attr('class','pin-ring').attr('opacity',0.8);
+        /* Outer glow */
+        g.append('circle').attr('r', 18)
+          .attr('fill','rgba(239,68,68,0.15)');
 
-        g.append('circle').attr('r', 22)
-          .attr('fill','none').attr('stroke','#ef4444').attr('stroke-width',1.2)
+        /* 3 pulsing rings */
+        g.append('circle').attr('r', 30)
+          .attr('fill','none').attr('stroke','#ef4444').attr('stroke-width',2)
+          .attr('class','pin-ring').attr('opacity',0.85);
+        g.append('circle').attr('r', 30)
+          .attr('fill','none').attr('stroke','#ff6b6b').attr('stroke-width',1.5)
           .attr('class','pin-ring-2').attr('opacity',0.6);
+        g.append('circle').attr('r', 30)
+          .attr('fill','none').attr('stroke','#ef4444').attr('stroke-width',1)
+          .attr('class','pin-ring-3').attr('opacity',0.35);
 
-        g.append('circle').attr('r', 22)
-          .attr('fill','none').attr('stroke','#ef4444').attr('stroke-width',0.8)
-          .attr('class','pin-ring-3').attr('opacity',0.4);
-
-        /* Solid core */
-        g.append('circle').attr('r', 5.5)
+        /* Solid core — larger */
+        g.append('circle').attr('r', 8)
           .attr('fill','#ef4444').attr('opacity',1);
 
         /* White centre */
-        g.append('circle').attr('r', 2.2)
+        g.append('circle').attr('r', 3.5)
           .attr('fill','white').attr('opacity',0.95);
 
         /* Label */
         g.append('text')
-          .attr('x', 9).attr('y', 4)
-          .attr('fill','#ef4444').attr('font-size','7.5px')
-          .attr('font-weight','800').attr('font-family','Inter,sans-serif')
-          .attr('letter-spacing','0.09em').attr('opacity',0.92)
+          .attr('x', 13).attr('y', 5)
+          .attr('fill','#ff4444').attr('font-size','10px')
+          .attr('font-weight','900').attr('font-family','Inter,sans-serif')
+          .attr('letter-spacing','0.12em').attr('opacity',1)
           .text('BLOEMFONTEIN');
 
       } else {
@@ -991,6 +963,26 @@ document.querySelectorAll('.btn-p').forEach(b => {
     setTimeout(() => rip.remove(), 700);
   });
 });
+
+/* ── JS WORD ROTATOR (no CSS overflow possible) ── */
+(function(){
+  const words = ['products.','solutions.','the future.'];
+  let idx = 0;
+  const el = document.getElementById('rw');
+  if(!el) return;
+  setInterval(()=>{
+    el.classList.add('fade-out');
+    setTimeout(()=>{
+      idx = (idx+1)%words.length;
+      el.textContent = words[idx];
+      el.classList.remove('fade-out');
+      el.classList.add('fade-in');
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        el.classList.remove('fade-in');
+      }));
+    }, 320);
+  }, 3200);
+})();
 
 /* ── Scroll reveal ── */
 const ro = new IntersectionObserver(es => {
