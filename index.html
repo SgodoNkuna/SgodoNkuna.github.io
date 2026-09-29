@@ -169,6 +169,18 @@ h2.stit{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.3rem);font-
 .pb{height:2px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
 .pf{height:100%;border-radius:2px;width:0%;background:linear-gradient(90deg,var(--blue),var(--sky));transition:width 1.3s cubic-bezier(.4,0,.2,1)}
 
+/* NOW & NEXT */
+#next{background:var(--bg)}
+.tl{border-left:1px solid var(--border2);margin:2.4rem 0 0 .4rem}
+.tl-i{position:relative;padding:0 0 1.9rem 1.7rem}
+.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:'';position:absolute;left:-6px;top:.3rem;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--sky)}
+.tl-i.now::before{background:var(--green);border-color:var(--green);animation:livePing 2s ease-in-out infinite}
+.tl-d{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--sky);letter-spacing:.06em;margin-bottom:.3rem;text-transform:uppercase}
+.tl-t{font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:#e2e8f0;margin-bottom:.25rem}
+.tl-x{font-size:.83rem;line-height:1.68;color:#64748b;max-width:640px}
+.sub-hd{margin:3.2rem 0 1.3rem}
+
 /* SKILLS */
 #skills{background:var(--bg2)}
 #skills .eye{color:var(--sky)}#skills .eye::before{background:var(--sky)}
@@ -273,6 +285,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Work</a></li>
+    <li><a href="#next">Next</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#sport">Sport</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -283,6 +296,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
 <div class="mob" id="mob">
   <a href="#about" onclick="cm()">About</a>
   <a href="#experience" onclick="cm()">Work</a>
+  <a href="#next" onclick="cm()">Next</a>
   <a href="#skills" onclick="cm()">Skills</a>
   <a href="#sport" onclick="cm()">Sport</a>
   <a href="#contact" onclick="cm()">Contact</a>
@@ -298,7 +312,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
     <div class="h-left rv">
       <div class="badge"><span class="live-dot"></span>Available · Bloemfontein, South Africa</div>
       <h1 class="h1">Building<br><span id="rw" class="rw-word">products.</span></h1>
-      <p class="h-sub">IT graduate, registered agency founder, and provincial athlete from Bloemfontein, SA. I ship real products while finishing my diploma at CUT. Graduating 2026.</p>
+      <p class="h-sub">IT graduate, registered agency founder, and provincial athlete from Bloemfontein, SA. I ship real products while finishing my diploma at CUT — completing in 2026.</p>
       <div class="h-btns">
         <a href="#experience" class="btn btn-p">See My Work</a>
         <a href="#about" class="btn btn-o">About Me</a>
@@ -307,7 +321,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
         <div><div class="sv" data-count="3" data-suffix="+">0</div><div class="sl">Yrs Agency</div></div>
         <div><div class="sv">R9.5k</div><div class="sl">Top Project</div></div>
         <div><div class="sv" data-count="1200" data-suffix="+">0</div><div class="sl">Monthly Visitors</div></div>
-        <div><div class="sv" data-count="2">0</div><div class="sl">Certs</div></div>
+        <div><div class="sv" data-count="3">0</div><div class="sl">Certs</div></div>
       </div>
     </div>
     <div class="rv d2">
@@ -317,7 +331,8 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
           <div class="cw-tabs" id="cwTabs">
             <span class="cw-tab active" data-idx="0">athletiq.ts</span>
             <span class="cw-tab" data-idx="1">dashboard.tsx</span>
-            <span class="cw-tab" data-idx="2">cloud.ts</span>
+            <span class="cw-tab" data-idx="2">agrihub.ts</span>
+            <span class="cw-tab" data-idx="3">cloud.ts</span>
           </div>
         </div>
         <div class="cw-body" id="cwBody"></div>
@@ -333,8 +348,8 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
 
 <div class="mq">
   <div class="mq-track">
-    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
-    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
+    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
+    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
   </div>
 </div>
 
@@ -363,7 +378,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
         <h2 class="stit">Running an agency while finishing my degree.</h2>
         <p>I'm a final-year <strong>Extended National Diploma in IT</strong> student at the Central University of Technology, Bloemfontein — graduating 2026.</p>
         <p>While studying I founded <strong>Lusandla Marketing (Pty) Ltd</strong> — a registered digital agency. Real clients, real invoices, real delivery. I also built <strong>CUT Athletiq</strong>, a sports performance platform, and presented it to CUT's Sports Department with structured IP deal options.</p>
-        <p>Outside of code: I captain the <strong>CUT Basketball Team</strong>, play for the <strong>Free State Warriors</strong>, and represent <strong>Mangaung Netball Team B</strong>.</p>
+        <p>Outside of code: I captain the <strong>CUT Basketball Team</strong>, play for the <strong>Free State Warriors</strong>, and represent <strong>Mangaung Netball Team B</strong>. I'm also the founding Chairman of the <strong>CUT Student Sports Council</strong>.</p>
         <div class="pills">
           <span class="pill">React / TypeScript</span><span class="pill">Supabase</span>
           <span class="pill">Microsoft Azure</span><span class="pill">Python</span>
@@ -392,13 +407,13 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
       <div class="ec rv d1">
         <div class="ec-hd"><div class="ec-ico">🏋️</div><span class="ec-tag">In Development</span></div>
         <div class="ec-t">CUT Athletiq</div><div class="ec-m">CUT · 2024 – Present</div>
-        <div class="ec-d">Multi-role sports performance platform. React / TypeScript + Supabase. POPIA-compliant. Presented to CUT Sports Dept with IP deal options.</div>
+        <div class="ec-d">Multi-role sports performance platform for athletes, coaches, physios and admins. React / TypeScript + Supabase with row-level security and POPIA-compliant separation of clinical and coaching data. Flutter/Dart mobile companion in build. IP licensing under negotiation with CUT's Product Development &amp; Technology Services office; entered for FNB App of the Year 2026.</div>
         <div class="pw"><div class="pi"><span>Build progress</span><span>Prototype</span></div><div class="pb"><div class="pf" data-w="58"></div></div></div>
       </div>
       <div class="ec rv">
         <div class="ec-hd"><div class="ec-ico">🌐</div><span class="ec-tag">Delivered · R9,500</span></div>
-        <div class="ec-t">A-Win Website — ThuthukaSA</div><div class="ec-m">Lusandla Marketing · March 2026</div>
-        <div class="ec-d">Website for the African Women Investment Network. Full design + build, four-week timeline, three post-launch maintenance tiers.</div>
+        <div class="ec-t">A-Win Website — ThuthukaSA</div><div class="ec-m">Lusandla Marketing · Mar – Jul 2026</div>
+        <div class="ec-d">Website for the African Women Investment Network. Six pages, Google/Apple sign-in, member portal, admin dashboard and Ozow payments on TanStack Start, React 19 and Supabase. Nine-person client committee managed remotely; three post-launch maintenance tiers.</div>
         <div class="pw"><div class="pi"><span>Completion</span><span>100%</span></div><div class="pb"><div class="pf" data-w="100"></div></div></div>
       </div>
       <div class="ec rv d1">
@@ -407,6 +422,60 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
         <div class="ec-d">Built and manage bfmsports.co.za — SA football jersey e-commerce. 1,200+ monthly visitors, 63% mobile, monthly analytics reporting.</div>
         <div class="pw"><div class="pi"><span>Traffic growth</span><span>Active</span></div><div class="pb"><div class="pf" data-w="72"></div></div></div>
       </div>
+      <div class="ec feat rv"><div class="ec-inner">
+        <div class="ec-hd"><div class="ec-ico">🌿</div><span class="ec-tag">Delivered · Live</span></div>
+        <div class="ec-t">Tshehla AgriHub — tshehlaagrihub.co.za</div>
+        <div class="ec-m">Lusandla Marketing · Sep 2026</div>
+        <div class="ec-d">Full e-commerce platform for an agribusiness client — livestock listings (goats, sheep, poultry), online ordering with basket and checkout, customer accounts with POPIA self-service, staff admin dashboards with two-person approval for critical actions, TOTP two-factor auth, PayFast checkout, Cloudflare Turnstile bot protection, audit log, and live order alerts via Supabase Realtime. WCAG AA certified across 23 pages. Deployed on Vercel with Docker self-hosting option. Client: Tshehla AgriHub (Pty) Ltd, 2025/653280/07.</div>
+        <div class="pw"><div class="pi"><span>Completion</span><span>100% · Live</span></div><div class="pb"><div class="pf" data-w="100"></div></div></div>
+      </div></div>
+      <div class="ec rv">
+        <div class="ec-hd"><div class="ec-ico">🛋️</div><span class="ec-tag">In Progress</span></div>
+        <div class="ec-t">Homeware &amp; Furniture Store</div><div class="ec-m">Lusandla Marketing · 2026</div>
+        <div class="ec-d">E-commerce platform for a Bloemfontein homeware and furniture client. PJN logistics integration and Payflex buy-now-pay-later checkout. Mobile-first design for local market.</div>
+        <div class="pw"><div class="pi"><span>Build progress</span><span>Active</span></div><div class="pb"><div class="pf" data-w="65"></div></div></div>
+      </div>
+      <div class="ec rv d1">
+        <div class="ec-hd"><div class="ec-ico">🐟</div><span class="ec-tag">Venture · Pre-launch</span></div>
+        <div class="ec-t">Lusandla Aquaculture</div><div class="ec-m">Vhembe, Limpopo · 2025 – Present</div>
+        <div class="ec-d">Tilapia farm built on IBC aquaponics — around 90% less water and 6–8 week turnover. Business plan, system design, build specs and regulatory outreach done; funding applications in progress. Target: 50+ rural jobs at full scale.</div>
+        <div class="pw"><div class="pi"><span>Stage</span><span>Funding</span></div><div class="pb"><div class="pf" data-w="35"></div></div></div>
+      </div>
+    </div>
+
+    <div class="sub-hd rv"><div class="eye">Leadership &amp; Earlier Roles</div></div>
+    <div class="exp-grid">
+      <div class="ec feat rv"><div class="ec-inner">
+        <div class="ec-hd"><div class="ec-ico">🏛️</div><span class="ec-tag">Founding Chairman</span></div>
+        <div class="ec-t">CUT Student Sports Council</div>
+        <div class="ec-m">Central University of Technology · 2026 – Present</div>
+        <div class="ec-d">Building CUT's student sports council from scratch. Wrote the 17-chapter constitution (v2.0) with grievance, equity and wellness portfolios; set up code reps across volleyball, rugby, basketball, netball and athletics; and took athlete issues to the sports office — securing Volleyball Zone 6 funding for food and transport. Launched a school development pipeline with Bloemfontein high schools across four sports.</div>
+        <div class="pw"><div class="pi"><span>Council build</span><span>Pipeline live</span></div><div class="pb"><div class="pf" data-w="70"></div></div></div>
+      </div></div>
+      <div class="ec rv">
+        <div class="ec-hd"><div class="ec-ico">🔑</div><span class="ec-tag">Outreach Director</span></div>
+        <div class="ec-t">Golden Key — CUT Chapter</div><div class="ec-m">2025 – Present</div>
+        <div class="ec-d">Planned the chapter's 12-event 2026 outreach programme, including a flagship Leadership Summit. Delivered a financial literacy talk to members.</div>
+        <div class="pw"><div class="pi"><span>2026 plan</span><span>12 events</span></div><div class="pb"><div class="pf" data-w="60"></div></div></div>
+      </div>
+      <div class="ec rv d1">
+        <div class="ec-hd"><div class="ec-ico">💼</div><span class="ec-tag">Employment</span></div>
+        <div class="ec-t">Earlier Roles</div><div class="ec-m">2022 – 2024</div>
+        <div class="ec-d"><strong style="color:#94a3b8">Marketing Manager, Xigodo Technologies</strong> (Aug 2022 – Jan 2023) — brand campaigns, social media and the marketing calendar.<br><strong style="color:#94a3b8">Hash Joint &amp; Afro Braai</strong> (Jul – Nov 2024) — front of house, plus menu and graphic design.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="next">
+  <div class="wrap">
+    <div class="rv"><div class="eye">Now &amp; Next</div><h2 class="stit">What I'm working on.</h2><p class="sbody">What's live, what's coming up, and where I'm headed once the diploma is done.</p></div>
+    <div class="tl">
+      <div class="tl-i now rv"><div class="tl-d">Now</div><div class="tl-t">Homeware &amp; furniture store build</div><div class="tl-x">Taking a Bloemfontein retailer online with Payflex buy-now-pay-later and Pay Just Now at checkout.</div></div>
+      <div class="tl-i now rv"><div class="tl-d">Now</div><div class="tl-t">CUT Athletiq — licensing &amp; FNB App of the Year</div><div class="tl-x">Working through licensing options with CUT's PDTS office while the platform competes in FNB App of the Year 2026. Also registered for the FNB App of the Year Hackathon, youth entrepreneurship track.</div></div>
+      <div class="tl-i rv"><div class="tl-d">9 – 10 Oct 2026</div><div class="tl-t">Tournament Director — CUT Annual Basketball Tournament</div><div class="tl-x">Co-directing the CUT Panthers tournament: team outreach, fixture drafting and running the event on the day.</div></div>
+      <div class="tl-i rv"><div class="tl-d">Up next</div><div class="tl-t">University Sports Day &amp; All-Star Showcase</div><div class="tl-x">A Sports Council event with composite "Best of CUT" teams, a code challenge, and visiting high schoolers from the development pipeline.</div></div>
+      <div class="tl-i rv"><div class="tl-d">End of 2026</div><div class="tl-t">Diploma complete · ceremony in 2027</div><div class="tl-x">Available for full-time roles, graduate programmes and client work from January 2027 — while growing Lusandla Marketing alongside.</div></div>
     </div>
   </div>
 </section>
@@ -422,7 +491,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
     <div class="sdiv"></div>
     <div class="rv"><div class="eye" style="color:rgba(77,168,212,.6)">Technical Skills</div>
       <div class="stags" style="margin-top:.9rem">
-        <span class="stag">React</span><span class="stag">TypeScript</span><span class="stag">Supabase</span><span class="stag">Flutter / Dart</span><span class="stag">Microsoft Azure</span><span class="stag">Python</span><span class="stag">Linux</span><span class="stag">Git</span><span class="stag">Digital Marketing</span><span class="stag">Business Development</span><span class="stag">Project Management</span><span class="stag">POPIA Compliance</span><span class="stag">E-Commerce</span><span class="stag">Analytics &amp; Reporting</span>
+        <span class="stag">React</span><span class="stag">TypeScript</span><span class="stag">Supabase</span><span class="stag">Flutter / Dart</span><span class="stag">Microsoft Azure</span><span class="stag">Python</span><span class="stag">Linux</span><span class="stag">Git</span><span class="stag">Docker</span><span class="stag">Vercel</span><span class="stag">PayFast</span><span class="stag">Digital Marketing</span><span class="stag">Business Development</span><span class="stag">Project Management</span><span class="stag">POPIA Compliance</span><span class="stag">E-Commerce</span><span class="stag">Analytics &amp; Reporting</span>
       </div>
     </div>
   </div>
@@ -463,7 +532,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
   </div>
 </section>
 
-<footer><div class="wrap"><div class="fr"><div class="fl">Wisani<span>.</span></div><nav class="fn"><a href="#about">About</a><a href="#experience">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><div class="fc2">© 2026 Wisani Nkuna · Lusandla Marketing · Bloemfontein, SA</div></div></div></footer>
+<footer><div class="wrap"><div class="fr"><div class="fl">Wisani<span>.</span></div><nav class="fn"><a href="#about">About</a><a href="#experience">Work</a><a href="#next">Next</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><div class="fc2">© 2026 Wisani Nkuna · Lusandla Marketing · Bloemfontein, SA</div></div></div></footer>
 
 <script>
 
@@ -504,6 +573,26 @@ const CODE_SNIPPETS = [
       '  <span class="c">// 1,200+ monthly visitors · 63% mobile</span>',
       '  <span class="k">const</span> <span class="p">[</span><span class="v">report</span><span class="p">,</span> <span class="f">setReport</span><span class="p">] =</span> <span class="f">useState</span><span class="p">&lt;</span><span class="t">AnalyticsReport</span><span class="p">&gt;()</span>',
       '  <span class="k">return</span> <span class="p">&lt;</span><span class="t">Dashboard</span> <span class="v">data</span><span class="o">={</span><span class="v">report</span><span class="o">}</span> <span class="p">/&gt;</span>',
+      '<span class="p">}</span>'
+    ]
+  },
+  {
+    file: "agrihub.ts",
+    lines: [
+      '<span class="c">// Tshehla AgriHub — tshehlaagrihub.co.za</span>',
+      '<span class="c">// Full e-commerce · POPIA-compliant · Live</span>',
+      '<span class="k">import</span> <span class="p">{ createClient }</span> <span class="k">from</span> <span class="s">"@supabase/supabase-js"</span>',
+      '',
+      '<span class="c">// Two-person approval for admin actions</span>',
+      '<span class="k">export async function</span> <span class="f">placeOrder</span><span class="p">(</span>',
+      '  <span class="v">cart</span><span class="o">:</span> <span class="t">CartItem</span><span class="p">[],</span>',
+      '  <span class="v">token</span><span class="o">:</span> <span class="t">string</span> <span class="c">// Cloudflare Turnstile</span>',
+      '<span class="p">) {</span>',
+      '  <span class="c">// Server-side pricing + stock locking</span>',
+      '  <span class="k">return</span> <span class="v">supabase</span><span class="p">.</span><span class="f">rpc</span><span class="p">(</span><span class="s">"place_order"</span><span class="p">, {</span>',
+      '    <span class="v">cart_items</span><span class="o">:</span> <span class="v">cart</span><span class="p">,</span>',
+      '    <span class="v">cf_token</span><span class="o">:</span> <span class="v">token</span>',
+      '  <span class="p">})</span>',
       '<span class="p">}</span>'
     ]
   },
@@ -588,7 +677,7 @@ const CODE_SNIPPETS = [
     const snip=CODE_SNIPPETS[idx];
     let n=1;
     function addLine(i){
-      if(i>=snip.lines.length){st=setTimeout(()=>render((idx+1)%CODE_SNIPPETS.length),3200);return;}
+      if(i>=snip.lines.length){st=setTimeout(()=>render((idx+1)%CODE_SNIPPETS.length),3000);return;}
       const div=document.createElement('div');div.className='cw-line';
       const code=snip.lines[i];
       div.innerHTML=`<span class="cw-num">${n++}</span><span class="cw-code">${code||'&nbsp;'}</span>`;
