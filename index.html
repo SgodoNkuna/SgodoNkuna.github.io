@@ -170,6 +170,7 @@ h2.stit{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.3rem);font-
 .pf{height:100%;border-radius:2px;width:0%;background:linear-gradient(90deg,var(--blue),var(--sky));transition:width 1.3s cubic-bezier(.4,0,.2,1)}
 
 /* NOW & NEXT */
+#ai{background:var(--bg2)}
 #next{background:var(--bg)}
 .tl{border-left:1px solid var(--border2);margin:2.4rem 0 0 .4rem}
 .tl-i{position:relative;padding:0 0 1.9rem 1.7rem}
@@ -285,6 +286,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Work</a></li>
+    <li><a href="#ai">AI</a></li>
     <li><a href="#next">Next</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#sport">Sport</a></li>
@@ -296,6 +298,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
 <div class="mob" id="mob">
   <a href="#about" onclick="cm()">About</a>
   <a href="#experience" onclick="cm()">Work</a>
+  <a href="#ai" onclick="cm()">AI</a>
   <a href="#next" onclick="cm()">Next</a>
   <a href="#skills" onclick="cm()">Skills</a>
   <a href="#sport" onclick="cm()">Sport</a>
@@ -332,7 +335,8 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
             <span class="cw-tab active" data-idx="0">athletiq.ts</span>
             <span class="cw-tab" data-idx="1">dashboard.tsx</span>
             <span class="cw-tab" data-idx="2">agrihub.ts</span>
-            <span class="cw-tab" data-idx="3">cloud.ts</span>
+            <span class="cw-tab" data-idx="3">spanner.sql</span>
+            <span class="cw-tab" data-idx="4">cloud.ts</span>
           </div>
         </div>
         <div class="cw-body" id="cwBody"></div>
@@ -348,8 +352,8 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
 
 <div class="mq">
   <div class="mq-track">
-    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
-    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
+    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Claude Code</span><span class="mi">n8n</span><span class="mi">ASP.NET Core</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
+    <span class="mi">React</span><span class="mi">TypeScript</span><span class="mi">Supabase</span><span class="mi">Microsoft Azure</span><span class="mi">Flutter</span><span class="mi">Python</span><span class="mi">Digital Marketing</span><span class="mi">Linux</span><span class="mi">Git</span><span class="mi">Claude Code</span><span class="mi">n8n</span><span class="mi">ASP.NET Core</span><span class="mi">Docker</span><span class="mi">Vercel</span><span class="mi">PayFast</span><span class="mi">Web Development</span><span class="mi">Business Dev</span><span class="mi">Project Mgmt</span>
   </div>
 </div>
 
@@ -404,6 +408,13 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
         <div class="ec-d">Registered digital agency delivering website development, digital marketing, and tech consulting to SMEs. End-to-end client ops — proposals, delivery, invoicing, retainers.</div>
         <div class="pw"><div class="pi"><span>Agency growth</span><span>Active</span></div><div class="pb"><div class="pf" data-w="82"></div></div></div>
       </div></div>
+      <div class="ec feat rv"><div class="ec-inner">
+        <div class="ec-hd"><div class="ec-ico">🔧</div><span class="ec-tag">Capstone · Group Leader of 7 · Live</span></div>
+        <div class="ec-t">Spanner — Riese Auto-Clinic</div>
+        <div class="ec-m">ITC327W Capstone, CUT · Aug – Nov 2026 · <a href="https://riese-auto-clinic.vercel.app" target="_blank" rel="noopener" style="color:var(--sky)">Live system</a> · <a href="https://github.com/BlackZ3ro/Spanner-Riese-Auto-Clinic" target="_blank" rel="noopener" style="color:var(--sky)">Code</a></div>
+        <div class="ec-d">Booking, stock and invoicing system for a real South African auto workshop, replacing a paper process. Mechanics use a Flutter app, the front desk uses an ASP.NET Core website, and customers follow their repair by reference code — all on one shared Supabase database. I led the 7-person team through requirements, design and build; built and hosted the staff website (bookings, parts, labour, invoice PDFs, vehicle history, public tracking page); integrated it with the teammate-built Flutter app; and enforced access rules in the database with Row Level Security so permissions hold even if an app is bypassed. Live testing found and fixed integration defects, including two disagreeing labour ledgers and a non-atomic add-part flow, now a single transaction on both apps. Free WhatsApp click-to-chat updates kept to the client’s zero budget.</div>
+        <div class="pw"><div class="pi"><span>Delivery</span><span>18 requirements · demonstrated</span></div><div class="pb"><div class="pf" data-w="100"></div></div></div>
+      </div></div>
       <div class="ec rv d1">
         <div class="ec-hd"><div class="ec-ico">🏋️</div><span class="ec-tag">In Development</span></div>
         <div class="ec-t">CUT Athletiq</div><div class="ec-m">CUT · 2024 – Present</div>
@@ -416,18 +427,18 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
         <div class="ec-d">Website for the African Women Investment Network. Six pages, Google/Apple sign-in, member portal, admin dashboard and Ozow payments on TanStack Start, React 19 and Supabase. Nine-person client committee managed remotely; three post-launch maintenance tiers.</div>
         <div class="pw"><div class="pi"><span>Completion</span><span>100%</span></div><div class="pb"><div class="pf" data-w="100"></div></div></div>
       </div>
-      <div class="ec rv d1">
-        <div class="ec-hd"><div class="ec-ico">⚽</div><span class="ec-tag">Ongoing</span></div>
-        <div class="ec-t">BFMSports E-Commerce</div><div class="ec-m">Lusandla Marketing · 2025 – Present</div>
-        <div class="ec-d">Built and manage bfmsports.co.za — SA football jersey e-commerce. 1,200+ monthly visitors, 63% mobile, monthly analytics reporting.</div>
-        <div class="pw"><div class="pi"><span>Traffic growth</span><span>Active</span></div><div class="pb"><div class="pf" data-w="72"></div></div></div>
-      </div>
       <div class="ec feat rv"><div class="ec-inner">
         <div class="ec-hd"><div class="ec-ico">🌿</div><span class="ec-tag">Delivered · Live</span></div>
         <div class="ec-t">Tshehla AgriHub — tshehlaagrihub.co.za</div>
         <div class="ec-m">Lusandla Marketing · Sep 2026</div>
         <div class="ec-d">Full e-commerce platform for an agribusiness client — livestock listings (goats, sheep, poultry), online ordering with basket and checkout, customer accounts with POPIA self-service, staff admin dashboards with two-person approval for critical actions, TOTP two-factor auth, PayFast checkout, Cloudflare Turnstile bot protection, audit log, and live order alerts via Supabase Realtime. WCAG AA certified across 23 pages. Deployed on Vercel with Docker self-hosting option. Client: Tshehla AgriHub (Pty) Ltd, 2025/653280/07.</div>
         <div class="pw"><div class="pi"><span>Completion</span><span>100% · Live</span></div><div class="pb"><div class="pf" data-w="100"></div></div></div>
+      <div class="ec rv d1">
+        <div class="ec-hd"><div class="ec-ico">⚽</div><span class="ec-tag">Ongoing</span></div>
+        <div class="ec-t">BFMSports E-Commerce</div><div class="ec-m">Lusandla Marketing · 2025 – Present</div>
+        <div class="ec-d">Built and manage bfmsports.co.za — SA football jersey e-commerce. 1,200+ monthly visitors, 63% mobile, monthly analytics reporting.</div>
+        <div class="pw"><div class="pi"><span>Traffic growth</span><span>Active</span></div><div class="pb"><div class="pf" data-w="72"></div></div></div>
+      </div>
       </div></div>
       <div class="ec rv">
         <div class="ec-hd"><div class="ec-ico">🛋️</div><span class="ec-tag">In Progress</span></div>
@@ -467,13 +478,48 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
   </div>
 </section>
 
+<section id="ai">
+  <div class="wrap">
+    <div class="rv"><div class="eye">AI Engineering</div><h2 class="stit">I build with AI — and I own what ships.</h2><p class="sbody">AI coding agents do the heavy lifting on my builds. I write the spec, set the architecture and security rules, then review, test and deploy everything before a client sees it.</p></div>
+    <div class="exp-grid">
+      <div class="ec feat rv"><div class="ec-inner">
+        <div class="ec-hd"><div class="ec-ico">🤖</div><span class="ec-tag">How I work</span></div>
+        <div class="ec-t">Spec-first, agent-built, human-reviewed</div>
+        <div class="ec-m">Claude Code · Lovable · GitHub · Vercel · Supabase</div>
+        <div class="ec-d">A-WIN, Tshehla AgriHub, the Spanner capstone and this portfolio were all shipped with AI coding agents under the same loop: written requirements → agent build → my code review → live testing against the real database → deploy. The judgement stays with me — data models, Row Level Security, payment flows and POPIA handling are designed and checked by hand, and live testing is where defects get caught before clients do.</div>
+        <div class="pw"><div class="pi"><span>Projects shipped this way</span><span>4+ live</span></div><div class="pb"><div class="pf" data-w="90"></div></div></div>
+      </div></div>
+      <div class="ec rv">
+        <div class="ec-hd"><div class="ec-ico">⚙️</div><span class="ec-tag">Automation</span></div>
+        <div class="ec-t">Workflow Weaver — n8n builder</div><div class="ec-m">Lusandla Cloud Systems · 2026</div>
+        <div class="ec-d">A visual builder inside our client portal that assembles n8n automation workflows for businesses and exports them ready to import into n8n, with a schema validator and unit tests so exported workflows load cleanly.</div>
+      </div>
+      <div class="ec rv d1">
+        <div class="ec-hd"><div class="ec-ico">📚</div><span class="ec-tag">LLM app · Prototype</span></div>
+        <div class="ec-t">StudyLink SA — Claude API</div><div class="ec-m">Digital Marketing module, CUT · 2026</div>
+        <div class="ec-d">AI-powered tutoring platform prototype for South African students, built on the Claude API, with a business model, marketing strategy and interactive prototype.</div>
+      </div>
+      <div class="ec rv">
+        <div class="ec-hd"><div class="ec-ico">📈</div><span class="ec-tag">AI in operations</span></div>
+        <div class="ec-t">AI-assisted client reporting</div><div class="ec-m">Lusandla Marketing · 2025 – Present</div>
+        <div class="ec-d">Monthly website analytics reports for clients such as BFMSports, drafted with AI and checked against the live numbers before they go out.</div>
+      </div>
+      <div class="ec rv d1">
+        <div class="ec-hd"><div class="ec-ico">🚚</div><span class="ec-tag">Platform migration</span></div>
+        <div class="ec-t">Off the no-code builder</div><div class="ec-m">lusandlamarketing.co.za · Nov 2026</div>
+        <div class="ec-d">Moved our agency site and client portal out of an AI site builder into our own GitHub repository and Vercel hosting: exported the code, removed the builder’s dependencies, rebuilt our icons and kept the Supabase backend running.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="next">
   <div class="wrap">
     <div class="rv"><div class="eye">Now &amp; Next</div><h2 class="stit">What I'm working on.</h2><p class="sbody">What's live, what's coming up, and where I'm headed once the diploma is done.</p></div>
     <div class="tl">
       <div class="tl-i now rv"><div class="tl-d">Now</div><div class="tl-t">Homeware &amp; furniture store build</div><div class="tl-x">Taking a Bloemfontein retailer online with Payflex buy-now-pay-later and Pay Just Now at checkout.</div></div>
       <div class="tl-i now rv"><div class="tl-d">Now</div><div class="tl-t">CUT Athletiq — licensing &amp; FNB App of the Year</div><div class="tl-x">Working through licensing options with CUT's PDTS office while the platform competes in FNB App of the Year 2026. Also registered for the FNB App of the Year Hackathon, youth entrepreneurship track.</div></div>
-      <div class="tl-i rv"><div class="tl-d">9 – 10 Oct 2026</div><div class="tl-t">Tournament Director — CUT Annual Basketball Tournament</div><div class="tl-x">Co-directing the CUT Panthers tournament: team outreach, fixture drafting and running the event on the day.</div></div>
+      <div class="tl-i now rv"><div class="tl-d">Nov 2026</div><div class="tl-t">Spanner capstone — final presentations</div><div class="tl-x">Presenting the live workshop system built for Riese Auto-Clinic: a booking made on the phone appears on the website, and a phase change on the website reaches the customer’s phone and tracking page.</div></div>
       <div class="tl-i rv"><div class="tl-d">Up next</div><div class="tl-t">University Sports Day &amp; All-Star Showcase</div><div class="tl-x">A Sports Council event with composite "Best of CUT" teams, a code challenge, and visiting high schoolers from the development pipeline.</div></div>
       <div class="tl-i rv"><div class="tl-d">End of 2026</div><div class="tl-t">Diploma complete · ceremony in 2027</div><div class="tl-x">Available for full-time roles, graduate programmes and client work from January 2027 — while growing Lusandla Marketing alongside.</div></div>
     </div>
@@ -491,7 +537,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
     <div class="sdiv"></div>
     <div class="rv"><div class="eye" style="color:rgba(77,168,212,.6)">Technical Skills</div>
       <div class="stags" style="margin-top:.9rem">
-        <span class="stag">React</span><span class="stag">TypeScript</span><span class="stag">Supabase</span><span class="stag">Flutter / Dart</span><span class="stag">Microsoft Azure</span><span class="stag">Python</span><span class="stag">Linux</span><span class="stag">Git</span><span class="stag">Docker</span><span class="stag">Vercel</span><span class="stag">PayFast</span><span class="stag">Digital Marketing</span><span class="stag">Business Development</span><span class="stag">Project Management</span><span class="stag">POPIA Compliance</span><span class="stag">E-Commerce</span><span class="stag">Analytics &amp; Reporting</span>
+        <span class="stag">React</span><span class="stag">TypeScript</span><span class="stag">Supabase</span><span class="stag">Flutter / Dart</span><span class="stag">Microsoft Azure</span><span class="stag">Python</span><span class="stag">Linux</span><span class="stag">Git</span><span class="stag">Claude Code</span><span class="stag">Claude API</span><span class="stag">n8n</span><span class="stag">ASP.NET Core / C#</span><span class="stag">Row Level Security</span><span class="stag">Docker</span><span class="stag">Vercel</span><span class="stag">PayFast</span><span class="stag">Digital Marketing</span><span class="stag">Business Development</span><span class="stag">Project Management</span><span class="stag">POPIA Compliance</span><span class="stag">E-Commerce</span><span class="stag">Analytics &amp; Reporting</span>
       </div>
     </div>
   </div>
@@ -532,7 +578,7 @@ footer{background:var(--bg);padding:1.6rem 0;border-top:1px solid var(--border)}
   </div>
 </section>
 
-<footer><div class="wrap"><div class="fr"><div class="fl">Wisani<span>.</span></div><nav class="fn"><a href="#about">About</a><a href="#experience">Work</a><a href="#next">Next</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><div class="fc2">© 2026 Wisani Nkuna · Lusandla Marketing · Bloemfontein, SA</div></div></div></footer>
+<footer><div class="wrap"><div class="fr"><div class="fl">Wisani<span>.</span></div><nav class="fn"><a href="#about">About</a><a href="#experience">Work</a><a href="#ai">AI</a><a href="#next">Next</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><div class="fc2">© 2026 Wisani Nkuna · Lusandla Marketing · Bloemfontein, SA</div></div></div></footer>
 
 <script>
 
@@ -594,6 +640,24 @@ const CODE_SNIPPETS = [
       '    <span class="v">cf_token</span><span class="o">:</span> <span class="v">token</span>',
       '  <span class="p">})</span>',
       '<span class="p">}</span>'
+    ]
+  },
+  {
+    file: "spanner.sql",
+    lines: [
+      '<span class="c">-- Spanner · Riese Auto-Clinic · Supabase</span>',
+      '<span class="c">-- Customers see only their own booking</span>',
+      '<span class="k">create function</span> <span class="f">track_booking</span><span class="p">(</span><span class="v">ref</span> <span class="t">text</span><span class="p">)</span>',
+      '<span class="k">returns</span> <span class="t">setof</span> <span class="v">booking_status</span>',
+      '<span class="k">language</span> <span class="v">sql</span> <span class="k">security definer</span>',
+      '<span class="k">as</span> <span class="s">$$</span>',
+      '  <span class="k">select</span> <span class="v">phase</span><span class="p">,</span> <span class="v">updated_at</span>',
+      '  <span class="k">from</span> <span class="v">bookings</span>',
+      '  <span class="k">where</span> <span class="v">reference_code</span> <span class="o">=</span> <span class="v">ref</span>',
+      '<span class="s">$$</span><span class="p">;</span>',
+      '',
+      '<span class="c">-- Admin-only: finalize, reopen, delete</span>',
+      '<span class="k">alter table</span> <span class="v">invoices</span> <span class="k">enable row level security</span><span class="p">;</span>'
     ]
   },
   {
